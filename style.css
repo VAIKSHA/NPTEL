@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-container {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    max-width: 600px;
+    width: 90%;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+#question-number {
+    font-size: 16px;
+    color: #667eea;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#question {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 500;
+}
+
+.option {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.option:hover {
+    background: #e9ecef;
+    border-color: #667eea;
+}
+
+.option.selected {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#next-btn, #prev-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    flex: 1;
+}
+
+#next-btn:hover, #prev-btn:hover {
+    background: #5a6fd8;
+}
+
+#next-btn:disabled, #prev-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.hidden {
+    display: none;
+}
+
+#result {
+    text-align: center;
+}
+
+#result h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#score {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #667eea;
+}
+
+#result button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#review {
+    max-height: 400px;
+    overflow-y: auto;
+    margin: 20px 0;
+}
+
+.review-question {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    background: #f8f9fa;
+}
+
+.review-question h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.review-option {
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 3px;
+    background: white;
+}
+
+.review-option.correct {
+    background: #d4edda;
+    color: #155724;
+    font-weight: bold;
+}
